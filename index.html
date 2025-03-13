@@ -1,0 +1,13 @@
+<html>
+  <header></header>
+  <body>
+    <script>
+      fetch('/.netlify/functions/my-link')
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('dynamic-link').href = data.link;
+        });
+    </script>
+    <a id="dynamic-link" href="#">Click Here</a>
+  </body>
+</html>
